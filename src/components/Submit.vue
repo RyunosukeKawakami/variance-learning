@@ -5,7 +5,7 @@
         <div>
             <!-- 問題文 -->
             <b-form-group
-                class="mb-5 mx-5"
+                class="my-5 mx-5"
                 label="問題文"
                 label-for="textarea-question"
             >
