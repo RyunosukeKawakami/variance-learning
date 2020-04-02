@@ -6,6 +6,7 @@ import Home from '@/components/Home.vue'
 import Submit from '@/components/Submit.vue'
 import Study from '@/components/Study.vue'
 import Answer from '@/components/Answer.vue'
+import Detail from '@/components/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,11 @@ const router = new VueRouter({
             path: '/answer',
             name: 'answer',
             component: Answer
+        },
+        {
+            path: '/detail',
+            name: 'detail',
+            component: Detail
         }
     ]
 })
@@ -40,7 +46,7 @@ router.beforeEach((to, from, next) => { // eslint-disable-line
         case '/': store.dispatch('updateActivateId', 1); break;
         case '/study': store.dispatch('updateActivateId', 2); break;
         case '/submit': store.dispatch('updateActivateId', 3); break;
-        case '/tempppppppp': store.dispatch('updateActivateId', 4); break;
+        case '/detail': store.dispatch('updateActivateId', 4); break;
     }
     next();
 })
