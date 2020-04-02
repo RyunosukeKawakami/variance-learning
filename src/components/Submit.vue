@@ -15,7 +15,7 @@
                 placeholder="問題文を入力"
                 rows="3"
                 max-rows="8"
-                no-resize="true"
+                no-resize
             ></b-form-textarea>
             </b-form-group>
 
@@ -31,7 +31,7 @@
                 placeholder="回答文を入力"
                 rows="3"
                 max-rows="8"
-                no-resize="true"
+                no-resize
             ></b-form-textarea>
             </b-form-group>
         </div>
@@ -46,6 +46,12 @@ import Navigation from '@/components/Navigation.vue'
 
 export default {
     name:'submit',
+    data(){
+        return{
+            text1: "",
+            text2: ""
+        }
+    },
     components:{
         Navigation
     }

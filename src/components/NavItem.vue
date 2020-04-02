@@ -1,8 +1,8 @@
 <template>
-    <b-nav-item class="nav-item" :active="isActive" :href="url">
-        <a class="nav-link text-light p-0 text-right" >
+    <b-nav-item class="nav-item" :active="isActivate" >
+        <router-link class="nav-link text-light p-0 text-right" :to="url">
             {{name}}
-        </a>
+        </router-link>
     </b-nav-item>
 </template>
 
@@ -10,8 +10,19 @@
 export default {
     props:[
         "name",
-        "isActive",
-        "url"
+        "url",
+        "id"
     ],
+    data(){
+        return{
+            isActivate : false,
+        }
+    },
+    created(){
+        console.log("hoge");
+        if(this.$store.state.ActivateId === this.id){
+            this.isActivate = true;
+        }
+    }
 }
 </script>

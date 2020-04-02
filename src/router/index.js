@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '@/store/TabActivateState'
 
 import Home from '@/components/Home.vue'
 import Submit from '@/components/Submit.vue'
@@ -8,7 +9,7 @@ import Answer from '@/components/Answer.vue'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
@@ -34,3 +35,14 @@ export default new VueRouter({
         }
     ]
 })
+router.beforeEach((to, from, next) => { // eslint-disable-line
+    switch (to.path) {
+        case '/': store.dispatch('updateActivateId', 1); break;
+        case '/study': store.dispatch('updateActivateId', 2); break;
+        case '/submit': store.dispatch('updateActivateId', 3); break;
+        case '/tempppppppp': store.dispatch('updateActivateId', 4); break;
+    }
+    next();
+})
+
+export default router;
