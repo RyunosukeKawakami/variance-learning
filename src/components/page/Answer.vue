@@ -4,9 +4,14 @@
 
         <show-rest-badge-list/>
         <answer-card/>
-        
-        <b-button block variant="outline-secondary" to="/study">次の問題に行く</b-button>
-        <b-button block variant="outline-secondary" to="/">ここまでにしておく</b-button>
+
+        <!-- 回答ボタン -->
+        <b-button block variant="success" @click="SendAnswerResult('easy')">即答！</b-button>
+        <b-button block variant="primary" @click="SendAnswerResult('normal')">ちょっと悩んだ</b-button>
+        <b-button block variant="warning" @click="SendAnswerResult('difficalt')">だいぶ悩んだ</b-button>
+        <b-button block variant="danger"  @click="SendAnswerResult('hard')">難しかった</b-button>
+
+        <b-button block variant="outline-danger" class="mt-4" @click="SendAnswerResult('noidea')">分からなかった</b-button>
     </div>
 </template>
 
