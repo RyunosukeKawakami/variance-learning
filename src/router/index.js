@@ -2,11 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '@/store/TabActivateState'
 
-import Home from '@/components/Home.vue'
-import Submit from '@/components/Submit.vue'
-import Study from '@/components/Study.vue'
-import Answer from '@/components/Answer.vue'
-import Detail from '@/components/Detail.vue'
+import Home from '@/components/page/Home.vue'
+import Submit from '@/components/page/Submit.vue'
+import Study from '@/components/page/Study.vue'
+import Answer from '@/components/page/Answer.vue'
+import Detail from '@/components/page/Detail.vue'
 
 Vue.use(VueRouter)
 

@@ -19,7 +19,6 @@ export default {
         }
     },
     created(){
-        console.log("hoge");
         if(this.$store.state.ActivateId === this.id){
             this.isActivate = true;
         }

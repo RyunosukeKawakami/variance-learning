@@ -14,7 +14,6 @@ export default new Vuex.Store({
     mutations: {
         setActivateId(state, id) {
             state.ActivateId = id;
-            console.log(state.ActivateId);
         }
     },
     actions: {

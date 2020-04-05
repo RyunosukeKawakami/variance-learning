@@ -40,7 +40,7 @@
 
     </div>
 </template>
-
+を元に
 <script>
 import Navigation from '@/components/Navigation.vue'
 
