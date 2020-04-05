@@ -5,7 +5,6 @@ import store from '@/store/TabActivateState'
 import Home from '@/components/page/Home.vue'
 import Submit from '@/components/page/Submit.vue'
 import Study from '@/components/page/Study.vue'
-import Answer from '@/components/page/Answer.vue'
 import Detail from '@/components/page/Detail.vue'
 
 Vue.use(VueRouter)
@@ -28,11 +27,6 @@ const router = new VueRouter({
             path: '/study',
             name: 'study',
             component: Study
-        },
-        {
-            path: '/answer',
-            name: 'answer',
-            component: Answer
         },
         {
             path: '/detail',

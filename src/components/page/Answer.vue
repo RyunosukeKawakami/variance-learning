@@ -20,6 +20,13 @@ export default {
         Navigation,
         AnswerCard,
         ShowRestBadgeList
+    },
+    methods:{
+        SendAnswerResult(difficalty){
+            //受け取った引数データベースに登録する。
+            console.log(difficalty);
+            this.$emit('switch-is-show-question')
+        }
     }
 }
 </script>
